@@ -1,480 +1,1357 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Responsive Portfolio Template" />
-    <meta name="author" content="Suvrat Jain" />
-    <title>RC Constructions</title>
-    <!-- Bootstrap core CSS -->
+    <title>DGM</title>
+    <!-- Bootstrap -->
     <link
-      href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-    />
-    <link
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <!-- Favicon -->
+    <link
+      href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQERABEBEAERAREAERERERERERERARAREBARABEREQEREREREQEQEREREQAREREBEBAREREBEREREREAEREQERAQERERAREBERERABEREREQEBEREQEQEREREAABEREBEBAQAAEBERERERAAAREQERAQEAAAABEBEREQAAAAEREjJgAAIwAAAAAkAABTAgAAACQAAAMCAABQIAAAAwQAAFAiAAADAAAAUCQAAAeCAABXoAAAB4QAAFfyAAAH8AAA"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- Carrousel Pluggin -->
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    <!--EXTERNAL CSS-->
+    <link rel="stylesheet" href="main.css" />
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--PLUGIN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!--FONT AWESOME-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <div
-      class="navbar navbar-inverse navbar-fixed-top"
-      role="navigation"
-      id="menu"
-    >
-      <div class="container">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><i class="fa fa-globe"></i></a>
+    <!--HEADER-->
+    <header>
+      <div class="banner"></div>
+      <nav class="nav_main" id="nav_hide">
+        <a class="icon" id="icon" onclick="opennav()"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <form action="#" class="col-12">
+          <div class="input-group search_form">
+            <select class="form-select">
+              <option value="">Products</option>
+              <option value="codex">Services</option>
+              <option value="comments">Auctions</option>
+            </select>
+            <input
+              type="search"
+              class="form-control mobile_search"
+              style="width: 55%"
+              placeholder="Search by Products and services"
+            />
+            <button class="btn">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <!-- input-group end.// -->
+        </form>
+        <a href="#" class="active"
+          >®<em>DG</em> <l style="font-weight: 200">|</l> Market Place</a
+        >
+        <a href="#">CONTACT</a>
+        <div class="dropdown">
+          <button class="dropbtn">FEATURES</button>
+          <div class="dropdown-content">
+            <a href="#">Products</a>
+            <a href="#">Services</a>
+            <a href="#">Auctions</a>
+          </div>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <a href="#">ABOUT</a>
+        <a href="#" style="float: right; padding: 10px 0"
+          ><i class="fa fa-user"></i> LOGIN</a
+        >
+      </nav>
+      <!-- Sticky Navbar -->
+      <div id="navbar_sub">
+        <div class="row">
+          <div class="col-lg-2 col-md-12">
+            <a href="#" class="active"
+              >®<em>DG</em> <l style="font-weight: 200">|</l> Market Place</a
+            >
+          </div>
+
+          <div class="col-lg-6 col-md-6 hidden_search">
+            <form action="#" class="col-12">
+              <div class="input-group search_form2">
+                <select class="form-select">
+                  <option value="">Products</option>
+                  <option value="codex">Services</option>
+                  <option value="comments">Auctions</option>
+                </select>
+                <input
+                  type="search"
+                  class="form-control mobile_search"
+                  style="width: 55%"
+                  placeholder="Search by Products and services"
+                />
+                <button class="btn">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+              <!-- input-group end.// -->
+            </form>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <a href="#"><i class="fa fa-user"></i> LOGIN</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+
+            <div class="dropdown">
+              <button class="dropbtn">PROJECTS</button>
+              <div class="dropdown-content">
+                <a href="#">Residential Projects</a>
+                <a href="#">Ongoing Projects</a>
+                <a href="#">Completed Projects</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--/.nav-collapse -->
       </div>
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container_main">
+      <table>
+        <tr>
+          <td>
+            <section>
+              <em>We Treat You Like A Family</em>
+              <h1 class="title ml9">
+                <span class="text-wrapper">
+                  <span class="letters">WELCOME TO DG Market PLace</span>
+                </span>
+              </h1>
+              <h5 class="sub-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                libero aperiam porro minus eveniet alias, in facere quaerat et
+                necessitatibus doloremque quod quae assumenda corrupti, rerum
+                cumque quisquam voluptatibus tempore. Digital marketplace for
+                all types of Buyers and sellers across the world...
+              </h5>
+              <div style="margin-top: 1rem">
+                <a href="#" class="btn1">Know more about us..</a>
+              </div>
+            </section>
+          </td>
+          <td>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <!-- Photo 1 -->
+                    <div class="card_part card_part-one">
+                      <img
+                        src="https://static.vecteezy.com/system/resources/previews/011/790/024/non_2x/upcoming-events-button-speech-bubble-upcoming-events-web-banner-template-illustration-vector.jpg"
+                        alt=""
+                        width="100%"
+                      />
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="card_part card_part-two">
+                      <img
+                        src="https://www.aksinteractive.com/blog/wp-content/uploads/2023/03/mobile-app-development.png"
+                        alt=""
+                        width="100%"
+                      />
+                    </div>
+
+                    <!-- Photo 3 -->
+                    <div class="card_part card_part-three">
+                      <img
+                        src="https://img.freepik.com/free-vector/businessmen-shaking-hands-through-display-video-call-smart-phone-internet-business-concept-cartoon-character-vector-illustration_1150-56245.jpg"
+                        alt=""
+                        width="100%"
+                      />
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="card_part card_part-four">
+                      <img
+                        src="https://cdn5.vectorstock.com/i/1000x1000/63/29/online-auction-concept-vector-34216329.jpg"
+                        alt=""
+                        width="100%"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
 
-    <div class="container-fluid splash" id="splash">
-      <div class="container">
-        <img
-          src="https://s-media-cache-ak0.pinimg.com/736x/71/9e/59/719e59481d2be40a77ab6c3386fc0a45--photoshop-illustrator-illustrator-tutorials.jpg"
-          alt="Portrait of Mr. Roboto"
-          class="profile-image"
-        />
-        <h1>Abdul Razak Shareef</h1>
-        <h1 class="intro-text">
-          <span class="lead" id="typed">Build a&nbsp;</span>
-        </h1>
-        <span class="continue"
-          ><a href="#about"><i class="fa fa-angle-down"></i></a
-        ></span>
+    <!--SECTION1-->
+    <section class="section1">
+      <!--******Starting Main Display CARDS******-->
+      <div class="price_cards">
+        <!--CARD_BEGINING-->
+        <div class="main_card card_1">
+          <img
+            src="https://i.ibb.co/BCRGYmx/bronze.png"
+            class="badge"
+            alt="STATER"
+          />
+          <h1 class="title">Request Anything</h1>
+          <span class="sub-title"
+            >See what's popular accross thousands of requests</span
+          >
+          <section>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,quia rem
+                omnis officii.
+              </li>
+            </ul>
+            <button class="btn1">View Detalles</button>
+          </section>
+        </div>
+        <!--CARD_ENDS-->
+        <!--CARD_BEGINING-->
+        <div class="main_card card_2">
+          <img
+            src="https://i.ibb.co/DQR0Mzt/silver.png"
+            class="badge"
+            alt="PREMIUM"
+          />
+          <h1 class="title">Create Events</h1>
+          <span class="sub-title"
+            >See what's popular accross thousands of Services</span
+          >
+          <section>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,quia rem
+                omnis officii.
+              </li>
+            </ul>
+            <button class="btn1">View Detalles</button>
+          </section>
+        </div>
+        <!--CARD_ENDS-->
+        <!--CARD_BEGINING-->
+        <div class="main_card card_3">
+          <img
+            src="https://i.ibb.co/Nmh4LR0/gold.png"
+            class="badge"
+            alt="UNLIMITED"
+          />
+          <h1 class="title">Auction Items</h1>
+          <span class="sub-title"
+            >See what's popular accross thousands of Auctions</span
+          >
+          <section>
+            <ul>
+              <li>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit,quia rem
+                omnis officii.
+              </li>
+            </ul>
+            <button class="btn1">View Detalles</button>
+          </section>
+        </div>
+        <!--CARD_ENDS-->
       </div>
-    </div>
-    <!-- About Section -->
-    <section class="success" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2>About Me</h2>
-            <hr class="star-light" />
+    </section>
+
+    <!--SECTION2-->
+    <section class="section2">
+      <div class="title_header">
+        <h1 class="title">Explore popular categories</h1>
+        <h5 class="sub-title">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          tempora magnam unde provident eius, deleniti facere dignissimos
+          pariatur? Aliquid culpa fugiat rerum earum illo quam perferendis
+          consequatur fuga atque aut.
+        </h5>
+      </div>
+      <div id="wrapper">
+        <div id="carousel">
+          <div id="content">
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
+            <img class="item" src="Images\facility.png" />
+            <img src="Images\logistics.png" class="item" />
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 col-lg-offset-2">
-            <p class="content-text">
-              RC Construction is a full-service construction company, general
-              contractor, design-builder and construction manager with office
-              location throughout the Karnataka State. Founded in 2020.
-            </p>
+        <button id="prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+      <a class="view_all" onclick="redirectToPage('category.html')"
+        ><span>View all</span></a
+      >
+    </section>
+
+    <!-- Trending AUctions Carrousel -->
+    <section class="trending_auctions">
+      <div class="title_header">
+        <h1 class="title">Trending Auctions</h1>
+        <h5 class="sub-title">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          tempora magnam unde provident eius, deleniti facere dignissimos
+          pariatur? Aliquid culpa fugiat rerum earum illo quam perferendis
+          consequatur fuga atque aut.
+        </h5>
+      </div>
+      <div id="wrapper2">
+        <div id="carousel2">
+          <div id="content2">
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
+            <div class="thumb-wrapper item2">
+              <div class="img-box">
+                <img
+                  src="Images\no-product-found.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="thumb-content">
+                <h4>Mens Titanium Wirst watch</h4>
+                <p class="time_text">
+                  <span> Time-Left </span><br /><span class="time_left"
+                    >6d 13h 52sec</span
+                  >
+                </p>
+                <p class="item-price">
+                  <b>5 Bids</b>
+                </p>
+                <a href="#" class="btn btn-primary">View More</a>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4">
-            <p class="content-text">
-              If you are in need of a beautiful home, I'm your guy. I look
-              forward to talking to you soon!
-            </p>
+        </div>
+        <button id="prev2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+            />
+          </svg>
+        </button>
+        <button id="next2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z" />
+            <path
+              d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+            />
+          </svg>
+        </button>
+      </div>
+      <a class="view_all"><span>View all</span></a>
+    </section>
+    <hr />
+    <!-- Tab Switches for Products and Services -->
+    <div class="title_header">
+      <h1 class="title">Featured Products and Services</h1>
+    </div>
+
+    <div class="tabs">
+      <div class="tab-2">
+        <label for="tab2-1">Products</label>
+        <input id="tab2-1" name="tabs-two" type="radio" checked="checked" />
+        <div>
+          <section class="trending_auctions">
+            <div class="title_header">
+              <h1 class="title">Products</h1>
+              <h5 class="sub-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                tempora magnam unde provident eius, deleniti facere dignissimos
+                pariatur? Aliquid culpa fugiat rerum earum illo quam perferendis
+                consequatur fuga atque aut.
+              </h5>
+            </div>
+            <div id="wrapper2">
+              <div id="carousel2">
+                <div id="content2">
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button id="prev2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z" />
+                  <path
+                    d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+                  />
+                </svg>
+              </button>
+              <button id="next2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z" />
+                  <path
+                    d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <a class="view_all"><span>View all</span></a>
+          </section>
+        </div>
+      </div>
+      <div class="tab-2">
+        <label for="tab2-2">Services</label>
+        <input id="tab2-2" name="tabs-two" type="radio" />
+        <div>
+          <section class="trending_auctions">
+            <div class="title_header">
+              <h1 class="title">Services</h1>
+              <h5 class="sub-title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+                tempora magnam unde provident eius, deleniti facere dignissimos
+                pariatur? Aliquid culpa fugiat rerum earum illo quam perferendis
+                consequatur fuga atque aut.
+              </h5>
+            </div>
+            <div id="wrapper2">
+              <div id="carousel2">
+                <div id="content2">
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                  <div class="thumb-wrapper item2">
+                    <div class="img-box">
+                      <img
+                        src="Images\no-product-found.png"
+                        class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div class="thumb-content">
+                      <h4>Mens Titanium Wirst watch</h4>
+                      <p class="time_text">
+                        <span> Time-Left </span><br /><span class="time_left"
+                          >6d 13h 52sec</span
+                        >
+                      </p>
+                      <p class="item-price">
+                        <b>5 Bids</b>
+                      </p>
+                      <a href="#" class="btn btn-primary">View More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button id="prev2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z" />
+                  <path
+                    d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z"
+                  />
+                </svg>
+              </button>
+              <button id="next2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z" />
+                  <path
+                    d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <a class="view_all"><span>View all</span></a>
+          </section>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!--SECTION3 (Events)-->
+
+    <section class="section3">
+      <div class="title_header">
+        <h1 class="title">
+          <u>Upcoming events which you don't want to miss</u>
+        </h1>
+      </div>
+      <div class="ag-format-container">
+        <div class="ag-courses_box">
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+              <span class="thumbnail text-center">
+                <h4 class="ag-courses-item_title">Requirement of 200 diodes</h4>
+                <div class="ratings">
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicin</p>
+                <p>Unde beatae minus perspiciatis fuga dolor,/p></p>
+                <p>explicabo voluptatibus fugiat molestias sed!</p>
+
+                <hr class="line" />
+                <div class="row">
+                  <div class="col-md-6 col-sm-6"></div>
+                  <div class="col-md-6 col-sm-6">
+                    <button class="btn btn-danger right">New</button>
+                  </div>
+                </div>
+              </span>
+
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date"> 04.11.2023 </span>
+              </div>
+            </a>
           </div>
-          <div class="col-lg-8 col-lg-offset-2 text-center contact-button">
-            <a href="#contact" class="btn btn-lg btn-outline">
-              <i class="fa fa-envelope"></i> Contact Me
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <span class="thumbnail text-center">
+                <h4 class="ag-courses-item_title">Requirement of 200 diodes</h4>
+                <div class="ratings">
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicin</p>
+                <p>Unde beatae minus perspiciatis fuga dolor,/p></p>
+                <p>explicabo voluptatibus fugiat molestias sed!</p>
+
+                <hr class="line" />
+                <div class="row">
+                  <div class="col-md-6 col-sm-6"></div>
+                  <div class="col-md-6 col-sm-6">
+                    <button class="btn btn-danger right">New</button>
+                  </div>
+                </div>
+              </span>
+
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date"> 04.11.2022 </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <span class="thumbnail text-center">
+                <h4 class="ag-courses-item_title">Requirement of 200 diodes</h4>
+                <div class="ratings">
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicin</p>
+                <p>Unde beatae minus perspiciatis fuga dolor,/p></p>
+                <p>explicabo voluptatibus fugiat molestias sed!</p>
+
+                <hr class="line" />
+                <div class="row">
+                  <div class="col-md-6 col-sm-6"></div>
+                  <div class="col-md-6 col-sm-6">
+                    <button class="btn btn-danger right">New</button>
+                  </div>
+                </div>
+              </span>
+
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date"> 04.11.2022 </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <span class="thumbnail text-center">
+                <h4 class="ag-courses-item_title">Requirement of 200 diodes</h4>
+                <div class="ratings">
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicin</p>
+                <p>Unde beatae minus perspiciatis fuga dolor,/p></p>
+                <p>explicabo voluptatibus fugiat molestias sed!</p>
+
+                <hr class="line" />
+                <div class="row">
+                  <div class="col-md-6 col-sm-6"></div>
+                  <div class="col-md-6 col-sm-6">
+                    <button class="btn btn-danger right">New</button>
+                  </div>
+                </div>
+              </span>
+
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date"> 04.11.2022 </span>
+              </div>
+            </a>
+          </div>
+
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <span class="thumbnail text-center">
+                <h4 class="ag-courses-item_title">Requirement of 200 diodes</h4>
+                <div class="ratings">
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicin</p>
+                <p>Unde beatae minus perspiciatis fuga dolor,/p></p>
+                <p>explicabo voluptatibus fugiat molestias sed!</p>
+
+                <hr class="line" />
+                <div class="row">
+                  <div class="col-md-6 col-sm-6"></div>
+                  <div class="col-md-6 col-sm-6">
+                    <button class="btn btn-danger right">New</button>
+                  </div>
+                </div>
+              </span>
+
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date"> 30.11.2022 </span>
+              </div>
+            </a>
+          </div>
+          <div class="ag-courses_item">
+            <a href="#" class="ag-courses-item_link">
+              <div class="ag-courses-item_bg"></div>
+
+              <span class="thumbnail text-center">
+                <h4 class="ag-courses-item_title">Requirement of 200 diodes</h4>
+                <div class="ratings">
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star"></span>
+                  <span class="glyphicon glyphicon-star-empty"></span>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicin</p>
+                <p>Unde beatae minus perspiciatis fuga dolor,/p></p>
+                <p>explicabo voluptatibus fugiat molestias sed!</p>
+
+                <hr class="line" />
+                <div class="row">
+                  <div class="col-md-6 col-sm-6"></div>
+                  <div class="col-md-6 col-sm-6">
+                    <button class="btn btn-danger right">New</button>
+                  </div>
+                </div>
+              </span>
+
+              <div class="ag-courses-item_date-box">
+                Start:
+                <span class="ag-courses-item_date"> 30.11.2022 </span>
+              </div>
             </a>
           </div>
         </div>
       </div>
     </section>
-    <!-- Portfolio -->
-    <div
-      class="container-fluid portfolio-container-holder content-section"
-      id="portfolio"
-    >
-      <div class="portfolio-container container">
-        <h1 class="text-center">My Portfolio</h1>
-        <hr class="star-portfolio" />
-        <div class="row">
-          <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-            <div class="portfolio-card">
-              <img
-                src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg"
-                alt="Portfolio"
-                class="img-responsive portfolio-img"
-              />
 
-              <div class="portfolio-img-desc">
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-            <div class="portfolio-card">
-              <img
-                src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg"
-                alt="Portfolio"
-                class="img-responsive portfolio-img"
-              />
-
-              <div class="portfolio-img-desc">
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-            <div class="portfolio-card">
-              <img
-                src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg"
-                alt="Portfolio"
-                class="img-responsive portfolio-img"
-              />
-
-              <div class="portfolio-img-desc">
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-            <div class="portfolio-card">
-              <img
-                src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg"
-                alt="Portfolio"
-                class="img-responsive portfolio-img"
-              />
-
-              <div class="portfolio-img-desc">
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-            <div class="portfolio-card">
-              <img
-                src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg"
-                alt="Portfolio"
-                class="img-responsive portfolio-img"
-              />
-
-              <div class="portfolio-img-desc">
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
-            <div class="portfolio-card">
-              <img
-                src="https://cdn2.hubspot.net/hubfs/145335/responsive-vs-adaptive-design-compressor.jpg"
-                alt="Portfolio"
-                class="img-responsive portfolio-img"
-              />
-
-              <div class="portfolio-img-desc">
-                <p>Lorem ipsum dolor sit amet</p>
-              </div>
-            </div>
-          </div>
+    <!--SECTION4-->
+    <!-- <section class="section4">
+      <div class="title_header">
+        <h1 class="title">¿Por qué elegir Hosting PCEL?</h1>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h5 class="sub-title">Web Hosting NVMe</h5>
+          <p>
+            Contamos con servidores con unidades NVMe, potentes y estables. Con
+            respaldos semanales con 10 puntos de restauración.
+          </p>
+        </div>
+        <div class="card">
+          <h5 class="sub-title">Soporte técnico especializado</h5>
+          <p>
+            Atención telefónica, chat de soporte, personal profesional a su
+            servicio, soporte remoto con Teamviewer.
+          </p>
+        </div>
+        <div class="card">
+          <h5 class="sub-title">Garantia de satisfacción</h5>
+          <p>
+            Nuestros servicios de hosting incluyen una garantía de satisfacción
+            total de 30 días.
+          </p>
         </div>
       </div>
-    </div>
-    <!-- Contact form -->
-    <div
-      class="container-fluid contact-me-container content-section"
-      id="contact"
-    >
-      <div class="container">
-        <h1 class="intro-text text-center">Contact Me</h1>
-        <hr class="star-light" />
-        <div class="row">
-          <div class="col-sm-12 col-md-12">
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="Name"
-                />
-              </div>
-            </div>
+    </section> -->
 
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-at"></i></div>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="email"
-                  placeholder="Email ID"
-                />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-phone"></i></div>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="phone"
-                  placeholder="Phone Number"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-12">
-            <textarea
-              class="form-control"
-              rows="5"
-              placeholder="Message"
-            ></textarea>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <button class="btn btn-default submit-button btn-lg btn-primary">
-            <i class="fa fa-paper-plane"></i> Send
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Footer -->
+    <!--FOOTER-->
     <footer>
-      <div class="container footer-container">
-        <div class="row footer-row">
-          <div class="col-xs-12 col-sm-6 col-md-6 text-center">
-            <h4 class="text-center">Find me here</h4>
-            <address>
-              <strong><i class="fa fa-location-arrow"></i> Monsters Inc.</strong
-              ><br />Lorem ipsum dolor, sir amet,<br />Mumbai, India 400050<br /><br />
-              <a class="tel" href="tel:9999988888" type="tel"
-                ><i class="fa fa-mobile"></i><span> +91 9876543210</span></a
-              >
-            </address>
-          </div>
+      <div class="footer">
+        <a href="#" class="active" style="color: rgb(255, 255, 255)"
+          >®<em>DG</em> <l style="font-weight: 200">|</l> Market Place</a
+        >
+        <div class="row">
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Products/a></li>
+            <li><a href="#">Servicesy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
 
-          <div class="col-xs-12 col-md-6 col-sm-6 social-section">
-            <div class="text-center">
-              <h4 class="text-center">Also, I can be found here</h4>
-              <div class="text-center social-buttons">
-                <a
-                  href="#"
-                  class="btn btn-default btn-lg social-button link-facebook"
-                  ><i class="fa fa-facebook"></i>
-                </a>
-
-                <a
-                  href="https://codepen.io/simplysuvi/"
-                  class="btn btn-default btn-lg social-button link-codepen"
-                  ><i class="fa fa-codepen"></i>
-                </a>
-
-                <a
-                  href="#"
-                  class="btn btn-default btn-lg social-button link-twitter"
-                  ><i class="fa fa-twitter"></i>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/simplysuvi"
-                  class="btn btn-default btn-lg social-button link-linkedin"
-                  ><i class="fa fa-linkedin"></i>
-                </a>
-                <a
-                  href="https://instagram.com/simplysuvi"
-                  class="btn btn-default btn-lg social-button link-instagram"
-                  ><i class="fa fa-instagram"></i>
-                </a>
-              </div>
-              <hr class="footer-hr" />
-              <h4 class="author">
-                Made with <i class="fa fa-heart"></i> by
-                <strong>Suvrat Jain</strong>
-              </h4>
-            </div>
-          </div>
+        <div class="text-center" style="color: rgb(176, 175, 175)">
+          <span>Copyright © 2023 LEVI Hosting - All rights reserved</span>
         </div>
       </div>
     </footer>
-    <nav class="navbar">
-        <ul class="menu">
-          <li class="menu-item">
-            <a href="#">Category 1</a>
-            <ul class="sub-menu">
-              <li><a href="#">Subcategory 1</a></li>
-              <li><a href="#">Subcategory 2</a></li>
-              <li><a href="#">Subcategory 3</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#">Category 2</a>
-            <ul class="sub-menu">
-              <li><a href="#">Subcategory 4</a></li>
-              <li><a href="#">Subcategory 5</a></li>
-              <li><a href="#">Subcategory 6</a></li>
-            </ul>
-          </li>
-          <li class="menu-item">
-            <a href="#">Category 3</a>
-            <ul class="sub-menu">
-              <li><a href="#">Subcategory 7</a></li>
-              <li><a href="#">Subcategory 8</a></li>
-              <li><a href="#">Subcategory 9</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <select class="form-select">
-        <option value="">Go Here</option>
-        <option value="codex">Popular Trends</option>
-        <option value="comments">Shop Products</option>
-        <option value="content">New Arrivals</option>
-      </select>      
-    <input type="radio" name="position" checked />
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
-    <input type="radio" name="position" />
-    <main id="carousel">
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <div class="item"></div>
-      <main>
 
-        <div class="viewed">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="bbb_viewed_title_container">
-                            <h3 class="bbb_viewed_title">Recently Viewed</h3>
-                            <div class="bbb_viewed_nav_container">
-                                <div class="bbb_viewed_nav bbb_viewed_prev"><b><--</b></div>
-                                <div class="bbb_viewed_nav bbb_viewed_next"><b>--></b></div>
-                            </div>
-                        </div>
-    
-                        <div class="bbb_viewed_slider_container">
-                            
-                          
-    
-                            <div class="owl-carousel owl-theme bbb_viewed_slider">
-                             
-                                <div class="owl-item">
-                                    <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924153/alcatel-smartphones-einsteiger-mittelklasse-neu-3m.jpg" alt=""></div>
-                                        <div class="bbb_viewed_content text-center">
-                                            <div class="bbb_viewed_price">₹12225<span>₹13300</span></div>
-                                            <div class="bbb_viewed_name"><a href="#">Alkatel Phone</a></div>
-                                        </div>
-                                        <ul class="item_marks">
-                                            <li class="item_mark item_discount">-25%</li>
-                                            <li class="item_mark item_new">new</li>
-                                        </ul>
-                                    </div>
-                                </div>
-    
-                           
-                                <div class="owl-item">
-                                    <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924221/51_be7qfhil.jpg" alt=""></div>
-                                        <div class="bbb_viewed_content text-center">
-                                            <div class="bbb_viewed_price">₹30079</div>
-                                            <div class="bbb_viewed_name"><a href="#">Samsung LED</a></div>
-                                        </div>
-                                        <ul class="item_marks">
-                                            <li class="item_mark item_discount">-25%</li>
-                                            <li class="item_mark item_new">new</li>
-                                        </ul>
-                                    </div>
-                                </div>
-    
-                              
-                                <div class="owl-item">
-                                    <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                        <div class="bbb_viewed_content text-center">
-                                            <div class="bbb_viewed_price">₹22250</div>
-                                            <div class="bbb_viewed_name"><a href="#">Samsung Mobile</a></div>
-                                        </div>
-                                        <ul class="item_marks">
-                                            <li class="item_mark item_discount">-25%</li>
-                                            <li class="item_mark item_new">new</li>
-                                        </ul>
-                                    </div>
-                                </div>
-    
-                               
-                                <div class="owl-item">
-                                    <div class="bbb_viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924275/images.jpg" alt=""></div>
-                                        <div class="bbb_viewed_content text-center">
-                                            <div class="bbb_viewed_price">₹1379</div>
-                                            <div class="bbb_viewed_name"><a href="#">Huawei Power</a></div>
-                                        </div>
-                                        <ul class="item_marks">
-                                            <li class="item_mark item_discount">-25%</li>
-                                            <li class="item_mark item_new">new</li>
-                                        </ul>
-                                    </div>
-                                </div>
-    
-                                
-                                <div class="owl-item">
-                                    <div class="bbb_viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924361/21HmjI5eVcL.jpg" alt=""></div>
-                                        <div class="bbb_viewed_content text-center">
-                                            <div class="bbb_viewed_price">₹225<span>₹300</span></div>
-                                            <div class="bbb_viewed_name"><a href="#">Sony Power</a></div>
-                                        </div>
-                                        <ul class="item_marks">
-                                            <li class="item_mark item_discount">-25%</li>
-                                            <li class="item_mark item_new">new</li>
-                                        </ul>
-                                    </div>
-                                </div>
-    
-                                <div class="owl-item">
-                                    <div class="bbb_viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-                                        <div class="bbb_viewed_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560924241/8fbb415a2ab2a4de55bb0c8da73c4172--ps.jpg" alt=""></div>
-                                        <div class="bbb_viewed_content text-center">
-                                            <div class="bbb_viewed_price">₹13275</div>
-                                            <div class="bbb_viewed_name"><a href="#">Speedlink Mobile</a></div>
-                                        </div>
-                                        <ul class="item_marks">
-                                            <li class="item_mark item_discount">-25%</li>
-                                            <li class="item_mark item_new">new</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <script src="app.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
+    <!--JAVASCRIPT-->
+    <script src="main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9bcb81b245.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
