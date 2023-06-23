@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DGM</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+        <!-- Favicon -->
+        <link
+        href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQERABEBEAERAREAERERERERERERARAREBARABEREQEREREREQEQEREREQAREREBEBAREREBEREREREAEREQERAQERERAREBERERABEREREQEBEREQEQEREREAABEREBEBAQAAEBERERERAAAREQERAQEAAAABEBEREQAAAAEREjJgAAIwAAAAAkAABTAgAAACQAAAMCAABQIAAAAwQAAFAiAAADAAAAUCQAAAeCAABXoAAAB4QAAFfyAAAH8AAA"
+        rel="icon"
+        type="image/x-icon"
+      />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="category.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+            <!--FONT AWESOME-->
+            <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+          />
+  </head>
+  <body>
+    <div class="container-fluid position-relative mt-3" style="z-index: 99999">
+      <div class="row" id="navbar_sub">
+        <!-- Sticky Navbar -->
+        <div class="col-lg-3 col-md-6 hidden_search nav_main mt-1">
+          <a href="#" class="active"
+            >®<em>DG</em> <l style="font-weight: 200">|</l> Market Place</a
+          >
+        </div>
+        <div class="col-lg-9 col-md-6 hidden_search">
+          <form action="#" class="col-12">
+            <div class="input-group search_form2">
+              <select class="form-select">
+                <option value="">Products</option>
+                <option value="codex">Services</option>
+                <option value="comments">Auctions</option>
+              </select>
+              <input
+                type="search"
+                class="form-control mobile_search"
+                style="width: 55%"
+                placeholder="Search by Products and services"
+              />
+              <button class="btn">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+            <!-- input-group end.// -->
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mb-3">
+      <div class="row">
+        <div class="col-md-12 bg-light border-bottom pt-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 mt-4 main_breadCrum">
+                <h2>Categories</h2>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="#" style="text-decoration: none; color: red"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Categories
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recent-categories"> 
+        <div class="container-fluid mb-3">
+            <div class="uk-section uk-section-default">
+              <div class="uk-container">
+                <h4>Recent Categories</h4>
+                <div
+                  class="uk-margin uk-grid-match uk-grid-collapse uk-child-width-1-4@l uk-text-center"
+                  uk-grid
+                >
+                  <!-- UIkit CARD 1 -->
+                  <div class="uk-visible-toggle" tabindex="-1">
+                    <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                      <!-- UIkit CARD BODY -->
+                      <div class="uk-card-body">
+                        <a class="uk-link-reset uk-position-cover" href="#"  onclick="redirectToPage('product-page.html')"></a>
+                        <div class="uk-flex uk-flex-center">
+                        </div>
+                        <h3 class="uk-card-title uk-margin">Facilities</h3>
+                      </div>
+                      <!-- UIkit CARD FOOTER DEFAULT -->
+                      <div class="uk-card-footer default">
+                        <p>DGM</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-visible-toggle" tabindex="-1">
+                    <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                      <!-- UIkit CARD BODY -->
+                      <div class="uk-card-body">
+                        <a class="uk-link-reset uk-position-cover" href="#"></a>
+                        <div class="uk-flex uk-flex-center">
+                        </div>
+                        <h3 class="uk-card-title uk-margin">Logistics</h3>
+                      </div>
+                      <!-- UIkit CARD FOOTER DEFAULT -->
+                      <div class="uk-card-footer default">
+                        <p>DGM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- UIkit CARD -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="container-fluid mb-3">
+      <div class="uk-section uk-section-default">
+        <div class="uk-container">
+            <h4>All Categories</h4>
+          <div
+            class="uk-margin uk-grid-match uk-grid-collapse uk-child-width-1-4@l uk-text-center"
+            uk-grid
+          >
+            <!-- UIkit CARD 1 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Gifts</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                  <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 2 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Machinery</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 3 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Furtinuture</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 4 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Electronics</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 5 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Chemicals</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 6 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Beauty</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 7 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Food</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 8 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Health</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 9 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Services</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 10 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Fassion</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 11 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Apparel</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+                <!-- UIkit CARD FOOTER HOVER -->
+              </div>
+            </div>
+            <!-- UIkit CARD 12 -->
+            <div class="uk-visible-toggle" tabindex="-1">
+              <div class="uk-margin uk-card uk-card-default uk-card-hover">
+                <!-- UIkit CARD BODY -->
+                <div class="uk-card-body">
+                  <a class="uk-link-reset uk-position-cover" href="#"></a>
+                  <div class="uk-flex uk-flex-center">
+                  </div>
+                  <h3 class="uk-card-title uk-margin">Agriculture</h3>
+                </div>
+                <!-- UIkit CARD FOOTER DEFAULT -->
+                <div class="uk-card-footer default">
+                    <p>DGM</p>
+                </div>
+              </div>
+            </div>
+            <!-- UIkit CARD -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
