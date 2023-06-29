@@ -629,7 +629,7 @@ header .nav_main .icon {
 /*SECTION3*/
 .section3 {
   width: 100%;
-  margin: 10vh 0;
+  /* margin: 10vh 0; */
 }
 
 .ag-format-container {
@@ -646,8 +646,7 @@ header .nav_main .icon {
   align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-
-  padding: 50px 0;
+  padding: 10px 0;
 }
 .ag-courses_item {
   -ms-flex-preferred-size: calc(33.33333% - 30px);
