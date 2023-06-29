@@ -145,6 +145,12 @@ em {
     width: 50%;
   }
 }
+@media (max-width: 768px) {
+  .btn-group,
+  .mobile_btn {
+    margin-bottom: 0.8rem;
+  }
+}
 .list-group-item.active,
 .btn-primary,
 .page-item:last-child .page-link,
@@ -204,4 +210,58 @@ em {
 label:hover {
   color: #ff0000;
   cursor: pointer;
+}
+/*FOOTER*/
+.footer {
+  background: #000;
+  padding: 30px 0px;
+  font-family: "Play", sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+  .footer .row a i {
+    margin: 0% 3%;
+  }
 }

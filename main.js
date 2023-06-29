@@ -1,3 +1,4 @@
+// Page Redirections
 function redirectToPage(url) {
   window.location.href = url;
 }
@@ -59,7 +60,7 @@ function opennav() {
   }
 }
 
-//Carrousel Category
+//Carrousel for Categories
 const gap = 16;
 
 const carousel = document.getElementById("carousel"),
@@ -118,33 +119,3 @@ prev2.addEventListener("click", (e) => {
 
 let width2 = carousel2.offsetWidth;
 window.addEventListener("resize", (e) => (width2 = carousel2.offsetWidth));
-
-//Carrousel for featured products
-const gap3 = 10;
-
-const carousel3 = document.getElementById("carousel3"),
-  content3 = document.getElementById("content3"),
-  next3 = document.getElementById("next3"),
-  prev3 = document.getElementById("prev3");
-
-next3.addEventListener("click", (e) => {
-  carousel3.scrollBy(width3 + gap, 0);
-  if (carousel3.scrollWidth !== 0) {
-    prev3.style.display = "flex";
-  }
-  if (content3.scrollWidth - width3 - gap <= carousel3.scrollLeft + width3) {
-    next3.style.display = "none";
-  }
-});
-prev3.addEventListener("click", (e) => {
-  carousel3.scrollBy(-(width3 + gap), 0);
-  if (carousel3.scrollLeft - width3 - gap <= 0) {
-    prev3.style.display = "none";
-  }
-  if (!content.scrollWidth - width3 - gap <= carousel3.scrollLeft + width3) {
-    next3.style.display = "flex";
-  }
-});
-
-let width3 = carousel3.offsetWidth;
-window.addEventListener("resize", (e) => (width3 = carousel3.offsetWidth));
